@@ -14,6 +14,12 @@ const monster = {
     diceCount : 1
 }
 
+// so we want to Create a new constructor function called Character which takes our data as a paramenter and 
+// Set up "this" for each of the 5 properties in our objects (eg: this.health = data.health)
+function character(){
+    
+}
+
 function getDiceRollArray(diceCount){
     const newDiceRolls = []
     for(let i = 0; i < diceCount; i++){
@@ -34,10 +40,6 @@ function getDiceHtml(diceCount){
 function renderCharacter(data){
     const{elementId, name, avatar, health , diceCount} =  data;
     const diceHtml = getDiceHtml(diceCount)
-
-    // let diceHtml = diceRoll.map(function(num){
-    //     return `<div class="dice">${num}</div>`
-    // }).join('')
 
     document.getElementById(elementId).innerHTML = `
         <div class="character-card">
