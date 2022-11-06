@@ -22,6 +22,13 @@ function character(){
     this.avatar = data.avatar;
     this.health = data.health;
     this.diceCount = data.diceCount;
+//     Create a method called getCharacterHtml that performs the same tasks as our current renderCharacter function.Create 
+//     two new instances of Character. One for a hero, called "wizard", and one for a monster, called "orc". 
+//    Render both of them on the page.Delete both the old renderCharacter function and the two lines of code at the
+//    bottom of the page which invoke that function.
+    this.getCharacterHtml= function(){
+
+    }
 }
 
 function getDiceRollArray(diceCount){
