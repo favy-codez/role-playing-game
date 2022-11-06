@@ -27,7 +27,18 @@ function character(){
 //    Render both of them on the page.Delete both the old renderCharacter function and the two lines of code at the
 //    bottom of the page which invoke that function.
     this.getCharacterHtml= function(){
+        const{elementId, name, avatar, health , diceCount} =  data;
+    const diceHtml = getDiceHtml(diceCount)
 
+    document.getElementById(elementId).innerHTML = `
+        <div class="character-card">
+            <h4 class="name"> ${name} </h4>
+            <img class="avatar" src="${avatar}"/>
+            <p class="health">health: <b> ${health} </b></p>
+            <div class="dice-container">
+                ${diceHtml}
+            </div>
+        </div>        
     }
 }
 
@@ -49,18 +60,7 @@ function getDiceHtml(diceCount){
 }
 
 function renderCharacter(data){
-    const{elementId, name, avatar, health , diceCount} =  data;
-    const diceHtml = getDiceHtml(diceCount)
-
-    document.getElementById(elementId).innerHTML = `
-        <div class="character-card">
-            <h4 class="name"> ${name} </h4>
-            <img class="avatar" src="${avatar}"/>
-            <p class="health">health: <b> ${health} </b></p>
-            <div class="dice-container">
-                ${diceHtml}
-            </div>
-        </div>        
+    
 `
 }
 
