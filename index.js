@@ -17,7 +17,11 @@ const monster = {
 // so we want to Create a new constructor function called Character which takes our data as a paramenter and 
 // Set up "this" for each of the 5 properties in our objects (eg: this.health = data.health)
 function character(){
-    
+    this.elementId = data.elementId
+    this.name = data.name;
+    this.avatar = data.avatar;
+    this.health = data.health;
+    this.diceCount = data.diceCount;
 }
 
 function getDiceRollArray(diceCount){
